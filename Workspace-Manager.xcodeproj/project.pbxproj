@@ -17,6 +17,8 @@
 		B37DF0862564FAD500E6DF54 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37DF0592564FAD400E6DF54 /* ContentView.swift */; };
 		B37DF0872564FAD500E6DF54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B37DF05A2564FAD500E6DF54 /* Assets.xcassets */; };
 		B37DF0882564FAD500E6DF54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B37DF05A2564FAD500E6DF54 /* Assets.xcassets */; };
+		B37DF0A72564FE6E00E6DF54 /* files.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37DF0A62564FE6E00E6DF54 /* files.swift */; };
+		B37DF0A82564FE6E00E6DF54 /* files.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37DF0A62564FE6E00E6DF54 /* files.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,7 @@
 		B37DF07A2564FAD500E6DF54 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B37DF07E2564FAD500E6DF54 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		B37DF0802564FAD500E6DF54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B37DF0A62564FE6E00E6DF54 /* files.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = files.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +107,7 @@
 				B37DF0572564FAD400E6DF54 /* Workspace_ManagerApp.swift */,
 				B37DF0582564FAD400E6DF54 /* Workspace_ManagerDocument.swift */,
 				B37DF0592564FAD400E6DF54 /* ContentView.swift */,
+				B37DF0A62564FE6E00E6DF54 /* files.swift */,
 				B37DF05A2564FAD500E6DF54 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -313,6 +317,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B37DF0832564FAD500E6DF54 /* Workspace_ManagerDocument.swift in Sources */,
+				B37DF0A72564FE6E00E6DF54 /* files.swift in Sources */,
 				B37DF0812564FAD500E6DF54 /* Workspace_ManagerApp.swift in Sources */,
 				B37DF0852564FAD500E6DF54 /* ContentView.swift in Sources */,
 			);
@@ -323,6 +328,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B37DF0842564FAD500E6DF54 /* Workspace_ManagerDocument.swift in Sources */,
+				B37DF0A82564FE6E00E6DF54 /* files.swift in Sources */,
 				B37DF0822564FAD500E6DF54 /* Workspace_ManagerApp.swift in Sources */,
 				B37DF0862564FAD500E6DF54 /* ContentView.swift in Sources */,
 			);
