@@ -10,8 +10,11 @@ import SwiftUI
 @main
 struct Workspace_ManagerApp: App {
     var body: some Scene {
+        WindowGroup { //runs this if launched normally
+            ContentView(document: .constant(Workspace_ManagerDocument()))
+        }
         DocumentGroup(newDocument: Workspace_ManagerDocument()) { file in
-            ContentView(document: file.$document)
+            OpenView()
         }
     }
 }
