@@ -11,7 +11,21 @@ struct ContentView: View {
     @Binding var document: Workspace_ManagerDocument
 
     var body: some View {
-        TextEditor(text: $document.text)
+        
+        NavigationView{
+            VStack (spacing: 50){
+                
+                NavigationLink(destination: DetailView(), label: {
+                    Text("     File     ")
+                })
+                
+                NavigationLink(destination: CreateNewFile(), label: {
+                    Text("Create new")
+                })
+                
+            }
+            
+        }
     }
 }
 
