@@ -10,6 +10,7 @@ import SwiftUI
 struct CreateNewFile: View {
     var body: some View {
         Text("this is creating a new file")
+            .frame(width: 300, height: 300)
     }
 }
 
