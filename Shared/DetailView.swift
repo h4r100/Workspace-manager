@@ -9,7 +9,19 @@ import SwiftUI
 
 struct DetailView: View {
     var body: some View {
-        Text("This is the file folder")
+        let n = 5
+        
+        NavigationView {
+            GroupBox(label: Text("Files")) {
+                VStack {
+                    ForEach (0..<n) {_ in
+                        NavigationLink(destination: CreateNewFile(), label: {Text("names")})
+                    }
+                }
+                
+            }
+        }
+
     }
 }
 
