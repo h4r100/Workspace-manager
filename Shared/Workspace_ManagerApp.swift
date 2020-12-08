@@ -14,7 +14,7 @@ struct Workspace_ManagerApp: App {
             ContentView(document: .constant(Workspace_ManagerDocument()))
         }
         DocumentGroup(newDocument: Workspace_ManagerDocument()) { file in
-            OpenView()
+            CreateNewFile()
         }
     }
 }
