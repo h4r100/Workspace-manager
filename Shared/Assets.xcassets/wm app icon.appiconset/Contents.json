@@ -116,18 +116,15 @@
       "size" : "128x128"
     },
     {
+      "filename" : "Workspace-manager icon-2.jpg",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "128x128"
     },
     {
+      "filename" : "Workspace-manager icon-1.jpg",
       "idiom" : "mac",
       "scale" : "1x",
-      "size" : "256x256"
-    },
-    {
-      "idiom" : "mac",
-      "scale" : "2x",
       "size" : "256x256"
     },
     {
