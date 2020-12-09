@@ -15,7 +15,7 @@ struct DetailView: View {
             GroupBox(label: Text("Files")) {
                 VStack {
                     ForEach (0..<n) {_ in
-                        NavigationLink(destination: CreateNewFile(), label: {Text("names")})
+                        NavigationLink(destination: CreateNewFile(document: .constant(Workspace_ManagerDocument())), label: {Text("names")})
                     }
                 }
                 

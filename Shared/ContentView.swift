@@ -19,7 +19,7 @@ struct ContentView: View {
                     Text("     File     ")
                 })
                 
-                NavigationLink(destination: CreateNewFile(), label: {
+                NavigationLink(destination: CreateNewFile(document: .constant(Workspace_ManagerDocument())), label: {
                     Text("Create new")
                 })
                 

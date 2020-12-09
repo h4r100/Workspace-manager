@@ -17,7 +17,7 @@ extension UTType {
 struct Workspace_ManagerDocument: FileDocument {
     var text: String
 
-    init(text: String = "Hello, world!") {
+    init(text: String = "app /Applications/Spotify.app") {
         self.text = text
     }
 
