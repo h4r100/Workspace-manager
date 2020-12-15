@@ -30,25 +30,13 @@ func filePicker() -> String {
 func openApps(doc: Workspace_ManagerDocument) {
     
     let lines = doc.text.components(separatedBy: .newlines)
-    print("separated")
     for line in lines {
         
         let task = Process()
-        task.currentDirectoryPath = "/"
         task.executableURL = URL(fileURLWithPath:"/usr/bin/open")
-        task.arguments = []
-        print("created process")
         
-        let cmds = line.components(separatedBy: .whitespaces)
-        if cmds[0] == "app" {
-            task.arguments?.append("-a")
-        }
-        for i in 1...(cmds.capacity-1) {
-            print (cmds[i])
-            task.arguments?.append(cmds[i])
-        }
-        print("added arguments")
-        
+        task.arguments = [line]
+    
         do {
             try task.run()
         } catch {
@@ -62,9 +50,14 @@ struct CreateNewFile: View {
     @Binding var document: Workspace_ManagerDocument
     
     var body: some View {
-        TextEditor(text: $document.text)
-            .frame(width: 300, height: 300)
-            .onAppear(perform:{openApps(doc: document)})
+        VStack {
+            TextEditor(text: $document.text)
+                .frame(width: 300, height: 300)
+                .onAppear(perform:{openApps(doc: document)})
+            Button(action: {openApps(doc:document)}) {
+                Label("Open", systemImage: /*@START_MENU_TOKEN@*/"42.circle"/*@END_MENU_TOKEN@*/)
+            }
+        }
     }
 }
 
