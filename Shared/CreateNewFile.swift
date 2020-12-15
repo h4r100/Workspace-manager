@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-// https://ourcodeworld.com/articles/read/1117/how-to-implement-a-file-and-directory-picker-in-macos-using-swift-5
+/* https://ourcodeworld.com/articles/read/1117/how-to-implement-a-file-and-directory-picker-in-macos-using-swift-5
 
 func filePicker() -> String {
     let openPanel = NSOpenPanel()
@@ -25,22 +25,23 @@ func filePicker() -> String {
         }
     }
     return "false"
-}
+}*/
 
 func openApps(doc: Workspace_ManagerDocument) {
     
-    let lines = doc.text.components(separatedBy: .newlines)
+    let lines = doc.text.components(separatedBy: .whitespacesAndNewlines)
     for line in lines {
+        if !line.isEmpty {
+            let task = Process()
+            task.executableURL = URL(fileURLWithPath:"/usr/bin/open")
+            
+            task.arguments = [line]
         
-        let task = Process()
-        task.executableURL = URL(fileURLWithPath:"/usr/bin/open")
-        
-        task.arguments = [line]
-    
-        do {
-            try task.run()
-        } catch {
-            print(error)
+            do {
+                try task.run()
+            } catch {
+                print(error)
+            }
         }
         
     }
@@ -52,12 +53,11 @@ struct CreateNewFile: View {
     var body: some View {
         VStack {
             TextEditor(text: $document.text)
-                .frame(width: 300, height: 300)
-                .onAppear(perform:{openApps(doc: document)})
+                .padding()
             Button(action: {openApps(doc:document)}) {
-                Label("Open", systemImage: /*@START_MENU_TOKEN@*/"42.circle"/*@END_MENU_TOKEN@*/)
-            }
-        }
+                Text("Open")
+            }.padding()
+        }.frame(width: 500, height: 300)
     }
 }
 
